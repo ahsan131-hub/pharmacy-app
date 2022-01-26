@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<AnchorPane maxHeight="400.0" maxWidth="330.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="330.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainLogin.loginController">
+   <children>
+      <Label alignment="CENTER" layoutX="85.0" layoutY="21.0" prefHeight="63.0" prefWidth="166.0" text="Login">
+         <font>
+            <Font name="SansSerif Regular" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="142.0" text="User Name :" />
+      <Label layoutX="34.0" layoutY="191.0" text="Password:" />
+      <TextField fx:id="username_id" layoutX="126.0" layoutY="138.0" promptText="User Name" />
+      <JFXButton layoutX="189.0" layoutY="269.0" onAction="#onLogin" prefHeight="32.0" prefWidth="83.0" text="login" />
+      <JFXButton fx:id="close_btn" layoutX="85.0" layoutY="269.0" onAction="#onClose" prefHeight="32.0" prefWidth="83.0" text="Close" />
+      <PasswordField fx:id="password_id" layoutX="127.0" layoutY="178.0" promptText="Password" />
+   </children>
+</AnchorPane>

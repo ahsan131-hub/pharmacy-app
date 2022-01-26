@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewRevenue.RevenueController">
+   <children>
+      <VBox layoutX="235.0" layoutY="210.0" prefHeight="903.0" prefWidth="1139.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" minWidth="0.0" prefHeight="45.0" prefWidth="679.0" spacing="20.0">
+               <children>
+                  <JFXTextField fx:id="searchValue" onAction="#searchAction" prefHeight="29.0" prefWidth="252.0" promptText="Search">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <TableView fx:id="tableView" prefHeight="413.0" prefWidth="522.0">
+               <columns>
+                  <TableColumn fx:id="idCol" prefWidth="92.0" text="ID:" />
+                  <TableColumn fx:id="nameCol" prefWidth="127.0" text="Customer Name" />
+                  <TableColumn fx:id="phoneCol" minWidth="18.0" prefWidth="100.0" text="Phone No:" />
+                  <TableColumn fx:id="address" minWidth="27.0" prefWidth="115.0" text="Address" />
+                  <TableColumn fx:id="Balance" text="Balance" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

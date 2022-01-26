@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="700.0" prefHeight="700.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reciepts.recieptController">
+   <children>
+      <HBox layoutX="5.0" layoutY="5.0">
+         <children>
+            <VBox prefHeight="582.0" prefWidth="487.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="5.0" prefHeight="53.0" prefWidth="351.0" text="Reciept">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="66.0" prefWidth="494.0" spacing="20.0">
+                     <children>
+                        <VBox prefHeight="95.0" prefWidth="506.0" spacing="10.0">
+                           <children>
+                              <JFXTextField fx:id="ItemName" alignment="TOP_LEFT" focusColor="#304480" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="222.0" promptText="Item Name ">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="20.0" right="189.0" top="5.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="quantity" alignment="TOP_LEFT" focusColor="#2e3f72" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="216.0" promptText="Quantity">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="20.0" right="189.0" top="5.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXButton fx:id="addBtn" nodeOrientation="LEFT_TO_RIGHT" onAction="#onAddAction" prefHeight="37.0" prefWidth="131.0" text="Add Item">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="20.0" right="189.0" top="5.0" />
+                                 </VBox.margin>
+                              </JFXButton>
+                              <Separator prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="256.0" prefWidth="551.0">
+                     <children>
+                        <VBox prefHeight="201.0" prefWidth="173.0">
+                           <children>
+                              <JFXTextField fx:id="customerName" labelFloat="true" promptText="Customer Name">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <Label prefHeight="36.0" prefWidth="200.0" text="Select Discount :">
+                                 <VBox.margin>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXRadioButton fx:id="radioBtn0" layoutX="35.0" layoutY="91.0" text="0%">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="30.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="radioBtn1" text="1%">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="30.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="radioBtn2" layoutX="10.0" layoutY="46.0" text="5%">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="30.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="radioBtn3" layoutX="10.0" layoutY="46.0" text="10%">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="30.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </JFXRadioButton>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="201.0" prefWidth="284.0">
+                           <children>
+                              <Label prefHeight="36.0" prefWidth="200.0" text="Total Amount:">
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <HBox>
+                                 <children>
+                                    <Label prefHeight="21.0" prefWidth="93.0" text="Amount :">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="amount" prefHeight="21.0" prefWidth="64.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label prefHeight="16.0" prefWidth="119.0" text="Old Amount :">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="oldAmount" prefHeight="16.0" prefWidth="119.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <JFXTextField fx:id="recieveAmount" prefHeight="23.0" prefWidth="173.0" promptText="Recieve Amount">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets right="50.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold Italic" size="15.0" />
+                                 </font>
+                              </JFXTextField>
+                              <HBox>
+                                 <children>
+                                    <Label prefHeight="29.0" prefWidth="112.0" text="return Amount :">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="returnAmount" prefHeight="31.0" prefWidth="112.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="38.0" prefWidth="262.0">
+                                 <children>
+                                    <JFXButton fx:id="saveAmount" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#mergePreviousBalance" prefHeight="36.0" prefWidth="232.0" text="Merge with previous balance" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="20.0" right="2.0" top="2.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Separator prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="53.0" prefWidth="484.0">
+                     <children>
+                        <JFXButton fx:id="printBtn" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#onPrintAction" prefHeight="43.0" prefWidth="155.0" text="Print" />
+                        <JFXButton fx:id="cancel" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="33.0" prefWidth="90.0" text="Cancel" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="582.0" prefWidth="383.0">
+               <children>
+                  <TableView fx:id="TableView" prefHeight="506.0" prefWidth="426.0">
+                     <columns>
+                        <TableColumn fx:id="nameCol" prefWidth="168.0" text="Item Name " />
+                        <TableColumn fx:id="pricePerCol" prefWidth="67.0" text="Price/Item" />
+                        <TableColumn fx:id="quantityCol" prefWidth="60.0" text="quantity" />
+                        <TableColumn fx:id="TotalPriceCol" prefWidth="66.0" text="Total Price" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <JFXButton alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="87.0" text="Remove Item">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <Separator prefWidth="200.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</AnchorPane>

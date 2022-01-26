@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="400.0" minWidth="1300.0" prefHeight="449.0" prefWidth="754.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StockList.stocklistController">
+   <children>
+      <VBox layoutX="-89.0" layoutY="52.0" prefHeight="449.0" prefWidth="679.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" minWidth="0.0" prefHeight="45.0" prefWidth="679.0" spacing="20.0">
+               <children>
+                  <JFXTextField fx:id="searchValue" onAction="#searchAction" prefHeight="29.0" prefWidth="252.0" promptText="Search">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXCheckBox fx:id="showExpBtn" checkedColor="#009a4d" text="Show Expired" textFill="#f53636">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font></JFXCheckBox>
+                  <Region prefHeight="41.0" prefWidth="455.0" />
+                  <JFXButton buttonType="RAISED" onAction="#onEditAction" prefHeight="35.0" prefWidth="193.0" ripplerFill="#323232" text="Edit Item" />
+                  <JFXButton buttonType="RAISED" layoutX="968.0" layoutY="13.0" onAction="#onDeleteAction" prefHeight="35.0" prefWidth="193.0" ripplerFill="#fc0d0d" text="Delete Item" />
+               </children>
+            </HBox>
+            <TableView fx:id="tableView" prefHeight="413.0" prefWidth="679.0">
+              <columns>
+                <TableColumn fx:id="nameCol" prefWidth="127.0" text="Name" />
+                  <TableColumn fx:id="mg" prefWidth="43.0" text="mg" />
+                <TableColumn fx:id="formulaCol" prefWidth="146.0" text="Formula" />
+                  <TableColumn fx:id="catCol" text="Category" />
+                  <TableColumn fx:id="expCol" minWidth="15.0" prefWidth="82.0" text="EXP Date" />
+                  <TableColumn fx:id="mfgCol" minWidth="18.0" prefWidth="100.0" text="MFG Date" />
+                  <TableColumn fx:id="totalQuantityCol" minWidth="27.0" prefWidth="115.0" text="Total Item " />
+                  <TableColumn fx:id="boxqCol" minWidth="27.0" prefWidth="115.0" text="Box Quantity" />
+                  <TableColumn fx:id="itemqCol" minWidth="0.0" prefWidth="112.0" text="Item Quantity" />
+                  <TableColumn fx:id="cost" minWidth="30.0" prefWidth="82.0" text="Cost/Item" />
+                  <TableColumn fx:id="priceCol" minWidth="0.0" prefWidth="115.0" text="Price per Item" />
+                  <TableColumn fx:id="companyCol" minWidth="30.0" prefWidth="106.0" text="Company" />
+                  <TableColumn fx:id="subCat" minWidth="30.0" prefWidth="82.0" text="Sub Category" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

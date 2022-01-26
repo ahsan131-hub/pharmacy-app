@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="511.0" prefWidth="515.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reciepts.RecieptListController">
+   <children>
+      <VBox alignment="CENTER" layoutX="-7.0" prefHeight="511.0" prefWidth="426.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" minWidth="0.0" prefHeight="45.0" prefWidth="679.0" spacing="20.0">
+               <children>
+                  <JFXTextField fx:id="searchValue" onAction="#searchAction" prefHeight="29.0" prefWidth="252.0" promptText="Search">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton buttonType="RAISED" onAction="#onEditAction" prefHeight="35.0" prefWidth="133.0" ripplerFill="#323232" text="Edit Item" />
+               </children>
+            </HBox>
+            <TableView fx:id="tableView" prefHeight="413.0" prefWidth="522.0">
+               <columns>
+                  <TableColumn fx:id="id" prefWidth="92.0" text="Reciept ID:" />
+                  <TableColumn fx:id="nameCol" prefWidth="127.0" text="Customer Name" />
+                  <TableColumn fx:id="dateCol" minWidth="18.0" prefWidth="100.0" text="Date" />
+                  <TableColumn fx:id="totalQuantityCol" minWidth="27.0" prefWidth="115.0" text="Total Item " />
+                  <TableColumn fx:id="amountCol" text="Amount" />
+               </columns>
+            </TableView>
+            <JFXButton buttonType="RAISED" onAction="#viewMore" prefHeight="35.0" prefWidth="133.0" ripplerFill="#323232" text="View More Details" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

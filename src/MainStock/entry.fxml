@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="504.0" prefWidth="457.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainStock.entryController">
+   <children>
+      <VBox layoutX="172.0" layoutY="62.0" prefHeight="504.0" prefWidth="457.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="53.0" prefWidth="600.0" text="ITEM ENTRY">
+               <font>
+                  <Font size="31.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Label>
+            <HBox spacing="20.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="144.0" text="Item Category  :">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="category_list" prefHeight="28.0" prefWidth="149.0" promptText="Select Category" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label prefHeight="23.0" prefWidth="103.0" text="Item Name  :" textAlignment="JUSTIFY">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </Label>
+                  <JFXTextField fx:id="Item_Name" promptText="Item Name" />
+                  <Label layoutX="30.0" layoutY="12.0" prefHeight="23.0" prefWidth="41.0" text="mg:" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="mg" prefHeight="26.0" prefWidth="70.0" promptText="mg" />
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="160.0" prefHeight="26.0" prefWidth="447.0">
+               <children>
+                  <Label prefHeight="23.0" prefWidth="170.0" text="Formula :" textAlignment="JUSTIFY">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </Label>
+                  <JFXTextField fx:id="formula" promptText="Formula" />
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="139.0" text="Cost price per Box :" textAlignment="JUSTIFY">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </Label>
+                  <JFXTextField fx:id="price_box" labelFloat="true" prefHeight="25.0" prefWidth="98.0" promptText="Cost Price">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </JFXTextField>
+                  <Label layoutX="30.0" layoutY="10.0" prefHeight="25.0" prefWidth="72.0" text="profit:" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="profit_percent" labelFloat="true" layoutX="191.0" layoutY="10.0" prefHeight="25.0" prefWidth="68.0" promptText="Cost Price">
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </JFXTextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="99.0">
+               <children>
+                  <Label prefHeight="23.0" prefWidth="169.0" text="Sale price per box:" textAlignment="JUSTIFY">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </Label>
+                  <JFXTextField labelFloat="true" promptText="sale price per box" />
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="125.0">
+               <children>
+                  <Label prefHeight="23.0" prefWidth="94.0" text="No: of Box:" textAlignment="JUSTIFY">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </Label>
+                  <JFXTextField fx:id="no_of_box" prefHeight="26.0" prefWidth="91.0" promptText="Box Quantity" />
+                  <Label layoutX="30.0" layoutY="12.0" prefHeight="23.0" prefWidth="113.0" text="No: of item  :" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="no_of_item" prefHeight="26.0" prefWidth="93.0" promptText="Item Quantity" />
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="99.0">
+               <children>
+                  <Label prefHeight="23.0" prefWidth="169.0" text="Sub Category  :" textAlignment="JUSTIFY">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </Label>
+                  <JFXTextField fx:id="sub_category" promptText="Type of Item" />
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label prefHeight="23.0" prefWidth="169.0" text="Company Name:" textAlignment="JUSTIFY">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </Label>
+                  <JFXTextField fx:id="company_name" promptText="Product Company" />
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label prefHeight="23.0" prefWidth="94.0" text="Mfg date:" textAlignment="JUSTIFY">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </Label>
+                  <JFXDatePicker fx:id="mfg_date" prefHeight="29.0" prefWidth="115.0" />
+                  <Label layoutX="30.0" layoutY="12.0" prefHeight="23.0" prefWidth="87.0" text="Exp date:" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXDatePicker fx:id="exp_date" prefHeight="29.0" prefWidth="112.0" />
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="15.0" layoutY="232.0" prefHeight="51.0" prefWidth="457.0" spacing="20.0">
+               <children>
+                  <JFXButton fx:id="saveBtn" onAction="#onSave" prefHeight="32.0" prefWidth="77.0" text="Save" />
+                  <JFXButton onAction="#onCancel" prefHeight="32.0" prefWidth="78.0" text="Cancel" />
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="57.0" prefWidth="457.0">
+               <children>
+                  <Label fx:id="result" alignment="CENTER" contentDisplay="CENTER" prefHeight="15.0" prefWidth="457.0">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
